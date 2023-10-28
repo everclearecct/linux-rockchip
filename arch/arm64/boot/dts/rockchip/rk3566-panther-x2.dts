@@ -146,8 +146,10 @@
 };
 
 &gpu {
-       mali-supply = <&vdd_gpu>;
-       status = "okay";
+	clock-names = "gpu", "bus";
+	interrupt-names = "gpu", "mmu", "job";
+	mali-supply = <&vdd_gpu>;
+	status = "okay";
 };
 
 &gmac1 {
