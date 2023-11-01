@@ -638,3 +638,13 @@
 &rknpu_mmu {
 	status = "okay";
 };
+
+&reserved_memory {
+	linux,cma {
+		compatible = "shared-dma-pool";
+		inactive;
+		reusable;
+		reg = <0x0 0x10000000 0x0 0x00800000>;
+		linux,cma-default;
+	};
+};
